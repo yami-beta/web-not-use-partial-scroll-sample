@@ -1,0 +1,46 @@
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: Arial, sans-serif;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  height: 100px;;
+  color: #ffffff;
+  background-color: rgba(96, 165, 250, 0.8);
+}
+
+header.sticky {
+  position: sticky;
+  top: 0;
+  left: 0;
+}
+
+#area1 {
+  height: 200px;
+  background-color: rgba(52, 211, 153, 0.8);
+}
+
+#area1.sticky {
+  position: sticky;
+  top: 100px;
+  left: 0;
+}
+
+#area2.partial {
+  overflow-y: auto;
+}
+
+#area2-content {
+  height: 150vh;
+  background-color: rgba(251, 191, 36, 0.8);
+}

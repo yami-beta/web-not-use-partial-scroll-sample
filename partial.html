@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Partial</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div>
+    <header>Header</header>
+    <main>
+      <div id="area1">Area 1</div>
+      <div id="area2" class="partial">
+        <div id="area2-content">
+          Area 2 content
+        </div>
+      </div>
+    </main>
+  </div>
+
+  <script>
+    const headerHeight = 100;
+    const area1Height = 200;
+
+    const area2 = document.getElementById("area2");
+
+    const handleResize = () => {
+      const windowHeight = window.innerHeight;
+      area2.style.height = `${windowHeight - headerHeight - area1Height}px`;
+    };
+
+    window.addEventListener("resize", handleResize);
+    handleResize();
+  </script>
+</body>
+</html>
